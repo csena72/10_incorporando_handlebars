@@ -1,0 +1,22 @@
+<h3>Mis Productos</h3>
+
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th><Nombre/th>
+            <th>Precio</th>
+        </tr>
+    </thead> 
+    <tbody>
+    {{#each productos}}
+        <tr>
+            <td>{{ this.id }}</td>
+            <td>{{ this.nombre }}</td>
+            <td>{{ this.precio }}</td>            
+        </tr>
+        
+    {{/each}}
+    </tbody>    
+</table>
+
