@@ -5,7 +5,8 @@
   "main": "index.js",
   "dependencies": {
     "expess": "0.0.1-security",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.2"
   },
   "devDependencies": {},
   "scripts": {
@@ -13,12 +14,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/csena72/09_API_RESTful.git"
+    "url": "git+https://github.com/csena72/10_incorporando_handlebars"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/csena72/09_API_RESTful/issues"
+    "url": "https://github.com/csena72/10_incorporando_handlebars/issues"
   },
-  "homepage": "https://github.com/csena72/09_API_RESTful#readme"
+  "homepage": "https://github.com/csena72/10_incorporando_handlebars#readme"
 }

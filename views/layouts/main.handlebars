@@ -1,22 +1,32 @@
-<h3>Mis Productos</h3>
+<!DOCTYPE html>
+<html lang="en">
 
-<table>
-    <thead>
-        <tr>
-            <th>#</th>
-            <th><Nombre/th>
-            <th>Precio</th>
-        </tr>
-    </thead> 
-    <tbody>
-    {{#each productos}}
-        <tr>
-            <td>{{ this.id }}</td>
-            <td>{{ this.nombre }}</td>
-            <td>{{ this.precio }}</td>            
-        </tr>
-        
-    {{/each}}
-    </tbody>    
-</table>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <title>Incorporando Handlebars</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="col-md-6 mx-auto text-center">
+            <div class="header-title mt-5">
+                <h1 class="wv-heading--title">
+                    Incorporando Handlebars
+                </h1>
+            </div>
+        </div>
+        {{{ body }}}
+    </div>
+
+</body>
+
+</html>

@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+var exphbs = require('express-handlebars');
 
 const app = express();
 const routerApi = express.Router();
@@ -8,10 +9,23 @@ const puerto = 8080;
 app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
 
+app.engine('handlebars', exphbs());
+app.set('view engine', 'handlebars');
+
+app.set('views', './views');
+
 app.use(express.static(__dirname + '/public'));
 
 let productos = [];
 let producto;
+
+app.get('/', (req,res) => {
+  res.render('home');
+});
+
+app.get("/productos/vista", (req, res) => {
+  res.render('productos', {productos: productos})
+});
 
 routerApi.get("/productos", (req, res) => {
   let response =
@@ -35,7 +49,7 @@ routerApi.post("/productos", (req, res) => {
   producto.id = productos.length + 1;
   productos.push(req.body);
 
-  res.send(producto);
+  res.redirect('/');
 });
 
 routerApi.put("/productos/:id", (req, res) => {
